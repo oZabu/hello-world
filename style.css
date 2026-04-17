@@ -1,0 +1,73 @@
+/* リセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ボディのスタイル */
+body {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* コンテナのスタイル */
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 60px 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    max-width: 500px;
+    width: 90%;
+}
+
+/* メインテキストのスタイル */
+.hello-text {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-out;
+}
+
+/* サブタイトルのスタイル */
+.subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: 300;
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+/* アニメーション */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .hello-text {
+        font-size: 2.5rem;
+    }
+    
+    .container {
+        padding: 40px 20px;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+}
